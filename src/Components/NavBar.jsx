@@ -8,9 +8,9 @@ const NavBar = () => {
   return (
     <>
 
-      <p className=" w-full h-10 flex justify-center items-center font-medium text-sm bg-blue-200 px-4 sm:px-6 lg:px-8">
+      {/* <p className=" w-full h-10 flex justify-center items-center font-medium text-sm bg-blue-200 px-4 sm:px-6 lg:px-8">
         Get free delivery on orders over $25{" "}
-      </p>
+      </p> */}
 
       <div className="flex items-center justify-between py-5 font-medium">
        <Link to={'/'}> <img className="w-36" src={assets.logo} alt="logo" /></Link>
