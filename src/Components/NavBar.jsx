@@ -11,8 +11,7 @@ const NavBar = () => {
       </p>
 
       <div className="flex items-center justify-between py-5 font-medium">
-
-        <img className="w-36" src={assets.logo} alt="" />
+        <img className="w-36" src={assets.logo} alt="logo" />
 
         <ul className="hidden sm:flex gap-5 text-sm text-gray-700 ">
           <NavLink to="/" className="flex flex-col items-center gap-1">
@@ -40,13 +39,13 @@ const NavBar = () => {
         </ul>
 
         <div className="flex items-center gap-6">
-          <img className="w-5 cursor-pointer" src={assets.search_icon} alt="" />
+          <img className="w-5 cursor-pointer" src={assets.search_icon} alt="search" />
 
           <div className="group relative">
             <img
               className="w-5 cursor-pointer"
               src={assets.profile_icon}
-              alt=""
+              alt="profile"
             />
 
             <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
@@ -67,7 +66,7 @@ const NavBar = () => {
             onClick={() => setVisible(true)}
             className="w-5 cursor-pointer sm:hidden"
             src={assets.menu_icon}
-            alt=""
+            alt="menu"
           />
         </div>
 
@@ -76,7 +75,21 @@ const NavBar = () => {
           className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
             visible ? "w-full" : "w-0"
           } `}
-        ></div>
+        >
+          <div className="flex flex-col text-gray-600">
+            <div
+              onClick={() => setVisible(false)}
+              className="flex items-center gap-4 p-3 cursor-pointer"
+            >
+              <img
+                className="h-4 rotate-180"
+                src={assets.dropdown_icon}
+                alt=""
+              />
+              <p>Back</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
