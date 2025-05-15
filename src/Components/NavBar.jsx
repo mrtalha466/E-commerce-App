@@ -4,10 +4,12 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
+
   return (
     <>
+
       <p className=" w-full h-10 flex justify-center items-center font-medium text-sm bg-blue-200 px-4 sm:px-6 lg:px-8">
-        Get free delivery on orders over $100{" "}
+        Get free delivery on orders over $25{" "}
       </p>
 
       <div className="flex items-center justify-between py-5 font-medium">
@@ -88,9 +90,14 @@ const NavBar = () => {
               />
               <p>Back</p>
             </div>
+            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/'>Home</NavLink>
+            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/collection'>Collection</NavLink>
+            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/about'>About</NavLink>
+            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/contact'>Contact</NavLink>
           </div>
         </div>
       </div>
+      
     </>
   );
 };
