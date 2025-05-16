@@ -5,7 +5,7 @@ import Title from "../Components/Title";
 import ProductItem from "../Components/ProductItem";
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products,search,showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
@@ -43,6 +43,10 @@ const Collection = () => {
       );
     }
 
+    if (showSearch&&search) {
+      productsCopy=productsCopy.filter((item)=>item.name.toLowerCase().includes(search.toLowerCase()))
+    }
+
     setFilterProducts(productsCopy);
   };
 
@@ -70,7 +74,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory]);
+  }, [category, subCategory,search,showSearch]);
 
   useEffect(() => {
     sortProduct();
