@@ -86,8 +86,9 @@ const PlaceOrder = () => {
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
             >
               <p
-                className={`min-w-3.5 h-3.5 border border-gray-200 rounded-full ${method === "stripe" ? "bg-green-500" : ""
-                  }`}
+                className={`min-w-3.5 h-3.5 border border-gray-200 rounded-full ${
+                  method === "stripe" ? "bg-green-500" : ""
+                }`}
               ></p>
               <img className="h-5 mx-4 " src={assets.stripe_logo} alt="" />
             </div>
@@ -97,8 +98,9 @@ const PlaceOrder = () => {
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
             >
               <p
-                className={`min-w-3.5 h-3.5 border border-gray-200 rounded-full ${method === "razerpay" ? "bg-green-500" : ""
-                  }`}
+                className={`min-w-3.5 h-3.5 border border-gray-200 rounded-full ${
+                  method === "razerpay" ? "bg-green-500" : ""
+                }`}
               ></p>
               <img className="h-5 mx-4 " src={assets.razorpay_logo} alt="" />
             </div>
@@ -108,8 +110,9 @@ const PlaceOrder = () => {
               className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
             >
               <p
-                className={`min-w-3.5 h-3.5 border border-gray-100 rounded-full ${method === "cod" ? "bg-green-500" : ""
-                  }`}
+                className={`min-w-3.5 h-3.5 border border-gray-100 rounded-full ${
+                  method === "cod" ? "bg-green-500" : ""
+                }`}
               ></p>
               <p className="text-gray-600 text-sm font-medium mx-4">
                 CASH ON DELIVERY
