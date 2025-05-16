@@ -102,7 +102,7 @@ const Product = () => {
         </div>
       </div>
 
-      {/* -----------Description and review section------------------- */}
+      {/* ---------------------------Description and review section----------------------------------- */}
 
       <div className="mt-20">
         <div className="flex">
@@ -128,7 +128,7 @@ const Product = () => {
         </div>
       </div>
 
-      {/* ---------------------diplay products----------------------------------- */}
+      {/* ------------------------------------diplay products------------------------------------- */}
       <RelatedProducts
         category={productData.category}
         subCategory={productData.subCategory}
