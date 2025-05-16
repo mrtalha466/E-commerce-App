@@ -27,7 +27,7 @@ const Product = () => {
 
   return productData ? (
     <div className="border-t pt-10 transition-opacity ease-in duration-500 opacity-100">
-      {/* ------------product Data--------- */}
+      {/* ----------------------------------product Data----------------------------------------- */}
       <div className="flex gap-12 sm:gap-12 flex-col sm:flex-row">
         {/* product images */}
         <div className="flex-1 flex flex-col-reverse gap-3 sm:flex-row">
@@ -48,7 +48,7 @@ const Product = () => {
           </div>
         </div>
 
-        {/* -------product info---------- */}
+        {/* ---------------------------------product info--------------------------------- */}
         <div className="flex-1">
           <h1 className="font-medium text-2xl mt-2">{productData.name}</h1>
 
@@ -102,7 +102,7 @@ const Product = () => {
         </div>
       </div>
 
-      {/* -----------Description and review section */}
+      {/* -----------Description and review section------------------- */}
 
       <div className="mt-20">
         <div className="flex">
