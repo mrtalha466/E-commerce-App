@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
+import { ShopContext } from "../Context/ShopContext";
 
 const NavBar = () => {
   const [visible, setVisible] = useState(false);
+  const { setShowSearch } = useContext(ShopContext)
 
   return (
     <>
@@ -13,7 +15,7 @@ const NavBar = () => {
       </p> */}
 
       <div className="flex items-center justify-between py-5 font-medium">
-       <Link to={'/'}> <img className="w-36" src={assets.logo} alt="logo" /></Link>
+        <Link to={'/'}> <img className="w-36" src={assets.logo} alt="logo" /></Link>
 
         <ul className="hidden sm:flex gap-5 text-sm text-gray-700 ">
           <NavLink to="/" className="flex flex-col items-center gap-1">
@@ -41,7 +43,7 @@ const NavBar = () => {
         </ul>
 
         <div className="flex items-center gap-6">
-          <img className="w-5 cursor-pointer" src={assets.search_icon} alt="search" />
+          <img onClick={() => setShowSearch(true)} className="w-5 cursor-pointer" src={assets.search_icon} alt="search" />
 
           <div className="group relative">
             <img
@@ -74,9 +76,8 @@ const NavBar = () => {
 
         {/* side  bar menu for smaller screen  */}
         <div
-          className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
-            visible ? "w-full" : "w-0"
-          } `}
+          className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? "w-full" : "w-0"
+            } `}
         >
           <div className="flex flex-col text-gray-600">
             <div
@@ -90,10 +91,10 @@ const NavBar = () => {
               />
               <p>Back</p>
             </div>
-            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/'>Home</NavLink>
-            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/collection'>Collection</NavLink>
-            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/about'>About</NavLink>
-            <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/contact'>Contact</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/'>Home</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/collection'>Collection</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/about'>About</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border border-gray-300' to='/contact'>Contact</NavLink>
           </div>
         </div>
       </div>
